@@ -1,0 +1,33 @@
+<section class="container">
+	<section class="main">
+		<h2>Download</h2>
+		<section class="english">
+			<button mat-mini-fab (click)="uploadFile(english)"><mat-icon>add</mat-icon></button>
+			<br>
+			<section class="file-container">
+				<span *ngFor="let file of englishlist">
+					<div *ngIf="file !='.' && file != '..'" class="thefile">
+						<a href="http://api.omsaiacademy.com/download/english/{{file}}" target="_blank">{{file}}</a>
+						<br>
+						<button mat-mini-fab color="warn" (click)="deleteFile(file, english)"><mat-icon>delete</mat-icon></button>
+					</div>
+				</span>
+			</section>
+			
+		</section>
+		<br>
+		<section class="other">
+			<button mat-mini-fab (click)="uploadFile(other)"><mat-icon>add</mat-icon></button>
+			<br>
+			<section class="file-container">
+				<span *ngFor="let file of otherlist">
+					<div *ngIf="file !='.' && file != '..'" class="thefile">
+						<a href="http://api.omsaiacademy.com/download/other/{{file}}" target="_blank">{{file}}</a>
+						<br>
+						<button mat-mini-fab color="warn" (click)="deleteFile(file, other)"><mat-icon>delete</mat-icon></button>
+					</div>
+				</span>
+			</section>
+		</section>
+	</section>
+</section>

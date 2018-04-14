@@ -1,0 +1,11 @@
+.fill{
+	flex: 1 1 auto;
+}
+.menu{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	overflow: hidden;
+	height: 30px;
+	background-color: lightgreen;
+}

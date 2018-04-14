@@ -1,0 +1,45 @@
+.container{
+	width: 100%;
+	background-color: rgb(240,240,240);
+}
+.main{
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 100vh;
+	background-color: white;
+}
+.main h2{
+	text-align: center;
+	margin: 0;
+}
+
+.english, .other{
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgb(240,240,250);
+	min-height: 50vh;
+}
+.file-container{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.thefile{
+	width: 200px;
+	background-color: white;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.thefile a{
+	color: blue;
+	text-decoration: none;
+}

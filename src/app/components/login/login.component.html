@@ -1,0 +1,17 @@
+<section class="main">
+  <mat-toolbar color="primary">Admin Panel</mat-toolbar>
+  <br>
+  <section class="container login-form" color="background">
+    <mat-card>
+      <h3>{{message}}</h3>
+      <mat-form-field>
+        <input matInput placeholder="Id" #id>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password" #pwd>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" (click)="login(id.value, pwd.value)">Login</button>
+    </mat-card>
+  </section>
+</section>

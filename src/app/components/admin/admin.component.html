@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>Om Sai Academy | Admin Panel</span>  
+	<span class="fill"></span>
+	<button mat-button (click)="logout()">Logout</button>
+</mat-toolbar>
+<mat-toolbar class="menu">
+	<button mat-button>Home</button>
+	<button mat-button routerLink="/admin/faculty">Faculty</button>
+	<button mat-button routerLink="/admin/schedule">Schedule</button>
+	<button mat-button routerLink="/admin/gallery">Gallery</button>
+	<button mat-button routerLink="/admin/download">Download</button>
+</mat-toolbar>
+<router-outlet></router-outlet>

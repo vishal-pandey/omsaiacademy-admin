@@ -1,0 +1,33 @@
+<section class="container">
+	<section class="main">
+		<h2>Gallery</h2>
+		<section class="slider">
+			<h3>Slider Images</h3>
+			<section class="slider-content">
+				
+				<div *ngFor="let img of glist">
+					<div class="slider-img-container" *ngIf="img != '.' && img != '..'">
+						<img src="http://api.omsaiacademy.com/gallery/slider/{{img}}">
+						<button mat-mini-fab (click)="deleteSliderImg(img)" ><mat-icon>delete</mat-icon></button>
+					</div>
+				</div>
+			</section>
+			<button mat-mini-fab color="primary" (click)="uploadSlider(slider)"><mat-icon>add</mat-icon></button>
+		</section>
+		<br>
+		<section class="slider">
+			<h3>Other Images</h3>
+			<section class="slider-content">
+				
+				<div *ngFor="let img of olist">
+					<div class="slider-img-container" *ngIf="img != '.' && img != '..'">
+						<img src="http://api.omsaiacademy.com/gallery/other/{{img}}">
+						<button mat-mini-fab (click)="deleteOtherImg(img)" ><mat-icon>delete</mat-icon></button>
+					</div>
+				</div>
+			</section>
+			<button mat-mini-fab color="primary" (click)="uploadSlider(other)"><mat-icon>add</mat-icon></button>
+		</section>
+
+	</section>
+</section>

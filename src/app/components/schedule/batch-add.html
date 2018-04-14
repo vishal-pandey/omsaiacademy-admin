@@ -1,0 +1,23 @@
+<section class="container" *ngIf="!updating">
+  <section class="status"><span class="fill"></span><button mat-mini-fab (click)="onNoClick()"><mat-icon>close</mat-icon></button></section>
+
+  <span><h2>Edit Batch Schedule</h2></span>
+  
+  <mat-form-field>
+    <input matInput placeholder="Batch"  #batch>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Timeing"  #btime>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Day"  #time>
+  </mat-form-field>
+	
+  <br>
+  <button mat-raised-button color="primary" (click)="addSchedule(batch.value, btime.value, time.value)">Update</button>
+</section>
+<section class="updating" *ngIf="updating">
+	<mat-spinner></mat-spinner>
+</section>

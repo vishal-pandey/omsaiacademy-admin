@@ -1,0 +1,20 @@
+<section class="container">
+	<section class="status"><span class="fill"></span><button mat-mini-fab (click)="onNoClick()"><mat-icon>close</mat-icon></button></section>
+	<mat-form-field style="display: none;">
+    <input matInput placeholder="Id" #id>
+  </mat-form-field>
+	<mat-form-field>
+    <input matInput placeholder="Name" #name>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Qualification" #quali>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Mobile" #mobile>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="About" #about>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="addTeacher(id.value, name.value, mobile.value, quali.value, about.value)">Add</button>
+</section>

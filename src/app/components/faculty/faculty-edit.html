@@ -1,0 +1,32 @@
+<section class="container" *ngIf="teacher && !updating">
+	<section class="status"><span class="fill"></span><button mat-mini-fab (click)="onNoClick()"><mat-icon>close</mat-icon></button></section>
+
+  <section class="profile">
+    <img src="http://api.omsaiacademy.com/faculty/profile/{{teacher.id}}.jpg">
+  </section>
+  <section class="edit-profile">
+    <input type="file" name="photo" #photo>
+    <button mat-raised-button (click)="uploadPhoto(photo.files[0], teacher.id)">Change Photo</button>
+  </section>
+
+	<mat-form-field style="display: none;">
+    <input matInput placeholder="Id"  value="{{teacher.id}}" #id>
+  </mat-form-field>
+	<mat-form-field>
+    <input matInput placeholder="Name" value="{{teacher.name}}" #name>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Qualification" value="{{teacher.quali}}" #quali>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Mobile" value="{{teacher.mobile}}" #mobile>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="About" value="{{teacher.about}}" #about>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="sendUpdate(id.value, name.value, mobile.value, quali.value, about.value)">Update</button>
+</section>
+<section class="updating" *ngIf="updating">
+	<mat-spinner></mat-spinner>
+</section>

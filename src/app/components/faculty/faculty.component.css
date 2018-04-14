@@ -1,0 +1,15 @@
+.container{
+	width: 100%;
+	background-color: rgb(240,240,240);
+}
+.main{
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 100vh;
+	background-color: white;
+}
+.main h2{
+	text-align: center;
+	margin: 0;
+}
